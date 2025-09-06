@@ -1,8 +1,8 @@
-# Qwen2-VL: Vision-Language Model for OCR and VQA
-This project demonstrates how to use the Qwen2-VL model from Hugging Face for Optical Character Recognition (OCR) and Visual Question Answering (VQA). The model combines vision and language capabilities, enabling users to analyze images and generate context-based responses. In this project, we'll specifically explore its application in analyzing a football image and providing tactical insights.
+# Qwen-VL: Vision-Language Model for OCR and VQA
+This project demonstrates how to use the Qwen-VL model from Hugging Face for Optical Character Recognition (OCR) and Visual Question Answering (VQA). The model combines vision and language capabilities, enabling users to analyze images and generate context-based responses. In this project, we'll specifically explore its application in analyzing a football image and providing tactical insights.
 
 ## Overview
-Qwen2-VL is a state-of-the-art vision-language model that can handle various multimodal tasks, such as:
+Qwen-VL is a state-of-the-art vision-language model that can handle various multimodal tasks, such as:
 
 - **Visual Question Answering (VQA)**: Answering questions based on an image.
 - **Optical Character Recognition (OCR)**: Extracting text from images.
@@ -28,12 +28,12 @@ First, install the required dependencies:
 
 ### Model Setup
 ```python
-from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
+from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from PIL import Image
 
 # Load the model and processor
-model = Qwen2VLForConditionalGeneration.from_pretrained("Qwen/Qwen2-VL-2B-Instruct", torch_dtype="auto", device_map="auto")
-processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")
+model = Qwen2_5_VLForConditionalGeneration.from_pretrained("Qwen/Qwen2.5-VL-3B-Instruct", torch_dtype="auto", device_map="auto")
+processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-3B-Instruct")
 ```
 
 ### Example: Football Image Analysis
